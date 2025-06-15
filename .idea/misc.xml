@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/payment-simulation/pom.xml" />
         <option value="$PROJECT_DIR$/order-processing/pom.xml" />
         <option value="$PROJECT_DIR$/cart-management/pom.xml" />
+        <option value="$PROJECT_DIR$/docker-compose/pom.xml" />
       </list>
     </option>
   </component>

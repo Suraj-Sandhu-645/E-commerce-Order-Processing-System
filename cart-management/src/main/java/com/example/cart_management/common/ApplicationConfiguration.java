@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ApplicationConfiguration {
 
-    @Bean
-    public CartMapper getCartMapper(){
-        return Mappers.getMapper(CartMapper.class);
-    }
+//    @Bean
+//    public CartMapper getCartMapper(){
+//        return Mappers.getMapper(CartMapper.class);
+//    }   // <-- Manual bean when automatically creation of bean is not working
 }

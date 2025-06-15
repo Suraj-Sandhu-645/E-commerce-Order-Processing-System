@@ -112,6 +112,11 @@ Without this processor, MapStruct won’t generate the mapper implementation, an
 			<version>2.2.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

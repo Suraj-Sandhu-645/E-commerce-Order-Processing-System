@@ -16,23 +16,22 @@ public class CartController {
     CartService cartService;
 
     @PostMapping("/{userId}/add")
-    public ResponseEntity<CartDTO> addItemToCart(@RequestBody CartItemDTO cartItemDTO, @PathVariable("userId") int userId){
+    public ResponseEntity<CartDTO> addItemToCart(@RequestBody CartItemDTO cartItemDTO, @PathVariable("userId") String userId){
         return new ResponseEntity<>(cartService.addItemToCart(cartItemDTO, userId), HttpStatus.CREATED);
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<CartDTO> getCartDetailsByUserId(@PathVariable("userId") int userId){
+    public ResponseEntity<CartDTO> getCartDetailsByUserId(@PathVariable("userId") String userId){
         return new ResponseEntity<>(cartService.getCartDetailsById(userId), HttpStatus.OK);
     }
 
     @DeleteMapping("/{userId}/remove")
-    public ResponseEntity<CartDTO> removeItemFromCart(@PathVariable("userId") int userId, @RequestBody CartItemDTO cartItemDTO)  {
+    public ResponseEntity<CartDTO> removeItemFromCart(@PathVariable("userId") String userId, @RequestBody CartItemDTO cartItemDTO)  {
         return new ResponseEntity<>(cartService.removeItemToCart(cartItemDTO, userId), HttpStatus.OK);
     }
 
     @PostMapping("/{userId}/checkout")
-    public ResponseEntity<CartDTO> checkoutAndSendEvent(@PathVariable("userId") int userId){
+    public ResponseEntity<CartDTO> checkoutAndSendEvent(@PathVariable("userId") String userId){
         return new ResponseEntity<>(cartService.checkoutCartDetailBySendingEvent(userId), HttpStatus.OK);
     }
-
 }

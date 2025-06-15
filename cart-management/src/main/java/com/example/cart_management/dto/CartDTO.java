@@ -12,6 +12,6 @@ import java.util.List;
 @Getter
 @Setter
 public class CartDTO {
-    private int userId;
+    private String userId;
     private List<CartItemDTO> cartItemDTO;
 }

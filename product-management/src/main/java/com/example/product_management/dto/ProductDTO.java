@@ -8,7 +8,7 @@ import lombok.*;
 @RequiredArgsConstructor
 @Setter
 public class ProductDTO {
-    int id;
+    String productId;
     String name;
     String description;
     double price;

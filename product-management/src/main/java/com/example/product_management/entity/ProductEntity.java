@@ -16,8 +16,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class ProductEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    @Column(name = "productId")
+    String productId;
     String name;
     String description;
     double price;

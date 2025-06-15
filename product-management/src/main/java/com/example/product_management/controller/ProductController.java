@@ -27,17 +27,17 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductDTO> getProductDetailsById(@PathVariable("id") int id){
+    public ResponseEntity<ProductDTO> getProductDetailsById(@PathVariable("id") String id){
         return new ResponseEntity<>(productService.getProductDetailsByProductId(id), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProductDTO> updateProductDetailsById(@PathVariable("id") int id, @RequestBody ProductDTO productDto){
+    public ResponseEntity<ProductDTO> updateProductDetailsById(@PathVariable("id") String id, @RequestBody ProductDTO productDto){
         return new ResponseEntity<>(productService.updateProductDetailsByProductId(id,productDto), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> deleteProductById(@PathVariable("id") int id){
+    public ResponseEntity<Boolean> deleteProductById(@PathVariable("id") String id){
         return new ResponseEntity<>(productService.deleteProductDetailsByProductId(id),HttpStatus.OK);
     }
 }

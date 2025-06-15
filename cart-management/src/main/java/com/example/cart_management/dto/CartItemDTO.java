@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CartItemDTO {
-    private int productId;
+    private String productId;
     private int quantity;
+    private double price;
 }

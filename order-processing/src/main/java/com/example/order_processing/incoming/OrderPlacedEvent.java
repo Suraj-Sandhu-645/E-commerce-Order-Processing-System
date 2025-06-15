@@ -1,5 +1,7 @@
-package com.example.cart_management.dto;
+package com.example.order_processing.incoming;
 
+import com.example.order_processing.dto.CartItemDTO;
+import com.example.order_processing.dto.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +13,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderPlaced {
+public class OrderPlacedEvent {
     private String orderId;
-    private int userId;
+    private String userId;
     private List<CartItemDTO> items;
     private double totalAmount;
-    private String status; // e.g., "PENDING", "PLACED"
+    private OrderStatus status; // e.g., "PENDING", "PLACED"
 }

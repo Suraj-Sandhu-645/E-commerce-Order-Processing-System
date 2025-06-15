@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface CartRepository extends JpaRepository<CartEntity,Integer> {
-    Optional<CartEntity> findByUserId(int userId);
-    boolean deleteByUserId(int userId);
+public interface CartRepository extends JpaRepository<CartEntity,String> {
+    Optional<CartEntity> findByUserId(String userId);
+    boolean deleteByUserId(String userId);
 }
